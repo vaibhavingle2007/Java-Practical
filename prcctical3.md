@@ -1,7 +1,3 @@
-Sure, here’s the **full practical write-up** for:
-
----
-
 ### 💡 **Aim:**
 Write programs to demonstrate the use of: **if statements** in Java.
 
@@ -89,7 +85,3 @@ The number is zero.
 ### ✅ **Conclusion:**
 
 This program demonstrates different uses of `if` statements in Java. It highlights how decisions in logic can be made using simple, nested, and laddered conditions based on runtime input, making the program adaptive and responsive.
-
----
-
-Want me to write the next one? Just give the topic or aim.
