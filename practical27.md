@@ -1,4 +1,3 @@
-
 ### 💡 **Aim:**
 Write a program to:
 1. **Create a sample database.**
