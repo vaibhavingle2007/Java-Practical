@@ -1,6 +1,3 @@
-Alright Vaibhav, here's your practical write-up in the exact format for:
-
----
 
 ### 💡 **Aim:**
 Write programs to evaluate different types of expressions in Java.
