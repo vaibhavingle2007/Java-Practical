@@ -21,9 +21,10 @@ Common scenarios for using **TextEvents** include:
 Here’s a Java program that demonstrates how to handle **text events** on a **JTextField** component using **TextListener**:
 
 ```java
-import javax.swing.*;  // Importing Swing components
-import java.awt.*;  // Importing AWT components
-import java.awt.event.*;  // Importing event handling classes
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 public class TextEventExample {
 
@@ -37,10 +38,24 @@ public class TextEventExample {
         // Create a JLabel to display the text entered
         JLabel label = new JLabel("Enter text in the field", JLabel.CENTER);
 
-        // Add a TextListener to the JTextField to handle text changes
-        textField.addTextListener(new TextListener() {
+        // Add a DocumentListener to the JTextField to handle text changes
+        textField.getDocument().addDocumentListener(new DocumentListener() {
             @Override
-            public void textValueChanged(TextEvent e) {
+            public void insertUpdate(DocumentEvent e) {
+                updateLabel(textField, label);
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                updateLabel(textField, label);
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                updateLabel(textField, label);
+            }
+
+            private void updateLabel(JTextField textField, JLabel label) {
                 // Get the text entered in the JTextField and set it in the label
                 label.setText("Text Entered: " + textField.getText());
             }
@@ -59,6 +74,7 @@ public class TextEventExample {
         frame.setVisible(true);
     }
 }
+
 ```
 
 **Explanation:**
