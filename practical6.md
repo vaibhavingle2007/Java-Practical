@@ -1,7 +1,5 @@
 ### 💡 **Aim:**
-Write programs using **Wrapper Class**:
-- To convert **primitive** into **object** (Boxing).
-- To convert **object** into **primitive** (Unboxing).
+Write programs using Wrapper Class: to convert primitive into object. To convert objects into primitives.
 
 ---
 
